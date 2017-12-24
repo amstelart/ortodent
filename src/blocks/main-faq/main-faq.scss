@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока main-faq, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-faq {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 0 96px;
+
+  &__item {
+    border: 6px solid #e6e6e6;
+    padding: 1.5em 4em 0.5em 4em;
+    margin-bottom: 2em;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__btn {
+    text-align: center;
+  }
+
+  &__user {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    span {
+      color: $color-main;
+    }
+  }
+
+  &__question {}
+  &__answer {
+    color: $color-main;
+  }
+
+}

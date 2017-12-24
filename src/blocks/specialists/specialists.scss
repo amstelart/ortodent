@@ -1,0 +1,56 @@
+// В этом файле должны быть стили для БЭМ-блока specialists, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.specialists {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__card {
+    flex-shrink: 0;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  &__card-img {
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 230px;
+    height: 230px;
+    margin-bottom: 1.2em;
+  }
+
+  &__card-title {
+    margin: 0;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 0.3em;
+  }
+
+  &__card-caption {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  &__note {
+    flex-grow: 1;
+    padding-left: 4em;
+    color: #fff;
+  }
+
+  &__note-title {
+    font-weight: 400;
+    margin-bottom: 0.2em;
+  }
+
+  &__note-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 1.3em;
+  }
+
+}
