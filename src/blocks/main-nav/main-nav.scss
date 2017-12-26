@@ -51,6 +51,21 @@ $transition-time:             0.3s !default;
     @media (min-width: $menu-desktop-width) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+
+      #{$block-name}__item {
+      }
+
+      #{$block-name}__link {
+        background: transparent;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+
     }
   }
 

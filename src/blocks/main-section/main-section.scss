@@ -5,7 +5,7 @@
 .main-section {
 
   $block-name:                &; // #{$block-name}__element
-  padding: 2em 0;
+  padding: 2em 0 4em;
 
   &__inner {
     @include container;
@@ -18,7 +18,8 @@
   &__title {
     text-align: center;
     font-weight: 400;
-    margin-top: 0;
+    font-size: 36px;
+    margin-top: 0.7em;
   }
 
   &__title-caption {
@@ -26,6 +27,10 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+  }
+
+  &--main-slider {
+    padding: 0;
   }
 
   &--services {

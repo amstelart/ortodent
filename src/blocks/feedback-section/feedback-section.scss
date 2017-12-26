@@ -6,6 +6,7 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  padding: 3.5em 0 3em;
   background-size: cover;
   background-position: center center;
   flex-shrink: 0;
@@ -34,6 +35,7 @@
 
   &__title {
     font-weight: 400;
+    margin-top: 0;
     text-transform: uppercase;
   }
 
@@ -42,6 +44,20 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+  }
+
+  &__info {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 14px;
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
   }
 
 }

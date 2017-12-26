@@ -1,0 +1,65 @@
+// В этом файле должны быть стили для БЭМ-блока specialists-carousel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.specialists-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 0 100px;
+
+  .owl-nav {
+    margin-top: 0;
+  }
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 58px;
+    opacity: 0.6;
+    svg {
+      stroke: #fff;
+    }
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+  .owl-prev {
+    left: 20px;
+  }
+
+  .owl-next {
+    right: 20px;
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    margin-bottom: 40px;
+    .owl-dot {
+      opacity: 0.6;
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+      span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #fff;
+        display: inline-block;
+      }
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+}

@@ -21,13 +21,19 @@
           <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
             <div class="main-section__inner">
               <div class="main-slider__title">Скидка на все виды услуг <br>при обслуживании семьи 15%</div>
-              <button class="btn btn-outline">Оставить заявку</button>
+              <button class="btn btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Оставить заявку</button>
             </div>
           </div>
           <div class="main-slider__item" style="background-image: url(img/slider-image-02.jpg);">
             <div class="main-section__inner">
-              <div class="main-slider__title">Свой дом <br>по цене квартиры</div>
-              <button class="btn btn-outline">Оставить заявку</button>
+              <div class="main-slider__title">Скидка на все виды услуг <br>при обслуживании семьи 15%</div>
+              <button class="btn btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Оставить заявку</button>
+            </div>
+          </div>
+          <div class="main-slider__item" style="background-image: url(img/slider-image-03.jpg);">
+            <div class="main-section__inner">
+              <div class="main-slider__title">Скидка на все виды услуг <br>при обслуживании семьи 15%</div>
+              <button class="btn btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -78,7 +84,7 @@
 
       <section class="main-section main-section--specialists" style="background-image: url(img/main-specialists-bg.jpg);">
         <div class="main-section__inner">
-          <div class="owl-carousel" id="specialists-carousel">
+          <div class="owl-carousel specialists-carousel" id="specialists-carousel">
             <div class="item specialists">
               <div class="specialists__card">
                 <div class="specialists__card-img">
@@ -96,7 +102,27 @@
                   что начало повседневной работы по формированию позиции
                   позволяет оценить значение направлений прогрессивного развития.
                 </p>
-                <a class="btn" href="#">Записаться к врачу</a>
+                <a class="btn btn--outline" href="#">Записаться к врачу</a>
+              </div>
+            </div>
+            <div class="item specialists">
+              <div class="specialists__card">
+                <div class="specialists__card-img">
+                  <img src="img/specialist-image.jpg" width="230" height="230" alt="">
+                </div>
+                <h3 class="specialists__card-title">Лузина Анна</h3>
+                <p class="specialists__card-caption">Стоматолог</p>
+              </div>
+              <div class="specialists__note">
+                <h2 class="specialists__note-title">Всегда мечтала стать стоматологом</h2>
+                <p class="specialists__note-text">
+                  Не следует, однако забывать, что начало повседневной работы
+                  по формированию позиции играет важную роль в формировании
+                  форм развития. Значимость этих проблем настолько очевидна,
+                  что начало повседневной работы по формированию позиции
+                  позволяет оценить значение направлений прогрессивного развития.
+                </p>
+                <a class="btn btn--outline" href="#">Записаться к врачу</a>
               </div>
             </div>
           </div>
@@ -146,7 +172,7 @@
         <div class="main-section__inner">
           <div class="main-section__header">
             <h2 class="main-section__title">Дипломы и сертификаты</h2>
-            <div class="owl-carousel" id="license-carousel">
+            <div class="owl-carousel license-carousel" id="license-carousel">
               <div class="item">
                 <a href="img/doc-demo-big.jpg" data-fancybox data-caption="Название документа">
                   <img src="img/doc-demo.jpg" alt="">
@@ -239,21 +265,22 @@
           <h2 class="feedback-section__title">Остались вопросы?</h2>
           <p class="feedback-section__caption">Для получения подробной информации звоните нам по тел.: +7 (4712) 74-70-44 или оставьте заявку</p>
         </div>
-        <form action="" class="feedback-form">
-          <label class="field-text">
+        <form action="" class="feedback-form" id="">
+          <label class="field-text feedback-form__field">
             <span class="field-text__input-wrap">
               <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
             </span>
           </label>
-          <label class="field-text">
+          <label class="field-text feedback-form__field">
             <span class="field-text__input-wrap">
               <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
             </span>
           </label>
-          <div class="field-actions">
-            <button class="btn">Оставить заявку</button>
+          <div class="field-actions feedback-form__field">
+            <button class="btn btn--block btn--outline">Оставить заявку</button>
           </div>
         </form>
+        <p class="feedback-section__info">Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a></p>
       </div>
     </section>
 
@@ -263,6 +290,7 @@
 
   </div>
 
+  @@include('blocks/modal-section/modal-section.html')
   @@include('_include/page_bottom.html')
 </body>
 </html>

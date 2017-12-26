@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока relation, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.relation {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    border-bottom: 1px solid $color-main;
+    margin-bottom: 2em;
+  }
+
+  &__title {
+    color: $color-main;
+    font-weight: 500;
+    margin-top: 0;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+}
