@@ -49,9 +49,10 @@
         <div class="page-header__inner">
           <div class="page-header__content">
             <div class="page-header__logo">
-              <a href="" class="logo">
+              <a href="index.html" class="logo">
                 <img src="img/logo.png" width="255" height="55" alt="Ортодент">
               </a>
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
             </div>
             <div class="page-header__block">
               <div class="page-header__info">
@@ -89,7 +90,6 @@
               </div>
               <div class="page-header__nav">
                 <nav id="main-nav" class="main-nav" role="navigation">
-                  <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
                   <ul class="main-nav__list">
                     <li class="main-nav__item  main-nav__item--active">
                       <a href="page-prices.html" class="main-nav__link">
@@ -170,55 +170,117 @@
         <div class="page-section__inner">
           <ul class="breadcrumbs">
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Фотогалерея</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Услуги и цены</a></li>
           </ul>
           <div class="page-section__header">
-            <h1 class="page-section__title">Фотогалерея</h1>
+            <h1 class="page-section__title">Услуги и цены</h1>
           </div>
-          <div class="photo-gallery">
-            <div class="photo-gallery__item">
-              <a href="img/gallery-photo-01.png" data-fancybox="gallery" data-caption="Подпись фотографии">
-                <img src="img/gallery-photo-01.png" width="362" height="300" alt="">
-              </a>
-              <p>Подпись фотографии</p>
+          <div class="table-mobile-scroll">
+            <table class="table table--price">
+                <thead class="table__header">
+                  <tr>
+                    <th>Диагностика</th>
+                    <th>Цены, руб.</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr>
+                    <td>Ортопантомограмма</td>
+                    <td>1 000</td>
+                  </tr>
+                  <tr>
+                    <td>Телерентгенограмма</td>
+                    <td>1 200</td>
+                  </tr>
+                  <tr>
+                    <td>Компьютерная томограмма</td>
+                    <td>1 500</td>
+                  </tr>
+                  <tr>
+                    <td>Лазерная диагностика скрытого кариеса</td>
+                    <td>350</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="photo-gallery__item">
-              <a href="img/gallery-photo-02.png" data-fancybox="gallery" data-caption="Подпись фотографии">
-                <img src="img/gallery-photo-02.png" width="362" height="300" alt="">
-              </a>
-              <p>Подпись фотографии</p>
-            </div>
-            <div class="photo-gallery__item">
-              <a href="img/gallery-photo-03.png" data-fancybox="gallery" data-caption="Подпись фотографии">
-                <img src="img/gallery-photo-03.png" width="362" height="300" alt="">
-              </a>
-              <p>Подпись фотографии</p>
-            </div>
-            <div class="photo-gallery__item">
-              <a href="img/gallery-photo-04.png" data-fancybox="gallery" data-caption="Подпись фотографии">
-                <img src="img/gallery-photo-04.png" width="362" height="300" alt="">
-              </a>
-              <p>Подпись фотографии</p>
-            </div>
-            <div class="photo-gallery__item">
-              <a href="img/gallery-photo-05.png" data-fancybox="gallery" data-caption="Подпись фотографии">
-                <img src="img/gallery-photo-05.png" width="362" height="300" alt="">
-              </a>
-              <p>Подпись фотографии</p>
-            </div>
-            <div class="photo-gallery__item">
-              <a href="img/gallery-photo-06.jpg" data-fancybox="gallery" data-caption="Подпись фотографии">
-                <img src="img/gallery-photo-06.jpg" width="362" height="300" alt="">
-              </a>
-              <p>Подпись фотографии</p>
-            </div>
+          <div class="table-mobile-scroll">
+            <table class="table table--price">
+                <thead class="table__header">
+                  <tr>
+                    <th>Терапевтический приём</th>
+                    <th>Цены, руб.</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr>
+                    <td>Пломбирование композитом светового отвержения</td>
+                    <td>от 2 800</td>
+                  </tr>
+                  <tr>
+                    <td>Художественная реставрация</td>
+                    <td>от 3 400</td>
+                  </tr>
+                  <tr>
+                    <td>Лечение пульпита, периодонтита (1 канал)</td>
+                    <td>3 000</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+          <div class="table-mobile-scroll">
+            <table class="table table--price">
+                <thead class="table__header">
+                  <tr>
+                    <th>Диагностика</th>
+                    <th>Цены, руб.</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr>
+                    <td>Ортопантомограмма</td>
+                    <td>1 000</td>
+                  </tr>
+                  <tr>
+                    <td>Телерентгенограмма</td>
+                    <td>1 200</td>
+                  </tr>
+                  <tr>
+                    <td>Компьютерная томограмма</td>
+                    <td>1 500</td>
+                  </tr>
+                  <tr>
+                    <td>Лазерная диагностика скрытого кариеса</td>
+                    <td>350</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+          <div class="table-mobile-scroll">
+            <table class="table table--price">
+                <thead class="table__header">
+                  <tr>
+                    <th>Терапевтический приём</th>
+                    <th>Цены, руб.</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr>
+                    <td>Пломбирование композитом светового отвержения</td>
+                    <td>от 2 800</td>
+                  </tr>
+                  <tr>
+                    <td>Художественная реставрация</td>
+                    <td>от 3 400</td>
+                  </tr>
+                  <tr>
+                    <td>Лечение пульпита, периодонтита (1 канал)</td>
+                    <td>3 000</td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </div>
       </div>
-      <!-- <main role="main">
-        <h1>NTH start project</h1>
-        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
-      </main> -->
     </div>
     <section class="feedback-section" style="background-image: url(img/feedback-section-bg.jpg);">
       <div class="feedback-section__inner">
@@ -307,6 +369,39 @@
           </div>
         </div>
       </footer>
+    </div>
+  </div>
+  <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h2 class="modal__title">Остались вопросы?</h2>
+          <p class="modal__caption">Для получения подробной инфомрации позвоните
+          нам по тел.: +7 (4712) 74-70-44 или оставьте заявку</p>
+        </div>
+        <div class="modal__body">
+          <form class="modal-call__form" action="">
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="ИМЯ" id="">
+              </span>
+            </label>
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id="">
+              </span>
+            </label>
+            <div class="field-actions">
+              <button class="btn btn--block btn--main">Оставить заявку</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <p class="modal__footer-text">Оставляя заявку я соглашаюсь на обработку
+          персональных данных. <a href="#">Политика конфиденциальности</a></p>
+        </div>
+      </div>
     </div>
   </div>
   <script src="js/jquery.min.js"></script>
