@@ -50,9 +50,10 @@ $field-padding-horizontal:    0.7em !default;
 
   &__header {
     background: $color-main;
-    color: #fff;
-    th {
+    th,
+    .chart {
       font-weight: 400;
+      color: #fff !important;
     }
   }
 
