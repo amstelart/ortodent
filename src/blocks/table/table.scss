@@ -35,7 +35,7 @@ $field-padding-horizontal:    0.7em !default;
 
   td,
   th {
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding: 0.6em 1.2em;
     vertical-align: top;
     border-bottom: 1px solid $border-color;
 
@@ -48,9 +48,47 @@ $field-padding-horizontal:    0.7em !default;
     text-align: left;
   }
 
-  &__header {}
+  &__header {
+    background: $color-main;
+    color: #fff;
+    th {
+      font-weight: 400;
+    }
+  }
 
-  &__body {}
+  &__body {
+    tr {
+      &:nth-child(even) {
+        background: #f2f2f2;
+      }
+    }
+  }
 
   &__footer {}
+
+  .chart {
+    text-align: center;
+    color: $color-main;
+    font-weight: 500;
+    max-width: 30px;
+  }
+
+  &--price {
+
+    td,
+    th {
+      border-bottom: none;
+
+      &:not(:first-child) {
+        border-left: none;
+      }
+    }
+
+    th+th,
+    td+td {
+      text-align: right;
+    }
+
+  }
+
 }
