@@ -70,7 +70,8 @@ $field-padding-horizontal:    0.7em !default;
     text-align: center;
     color: $color-main;
     font-weight: 500;
-    max-width: 30px;
+    width: 30px;
+    vertical-align: middle;
   }
 
   &--price {

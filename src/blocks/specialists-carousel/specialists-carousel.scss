@@ -7,6 +7,9 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: 0 100px;
+  @media (max-width: ($screen-sm - 1)) {
+    padding: 0;
+  }
 
   .owl-nav {
     margin-top: 0;

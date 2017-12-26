@@ -31,6 +31,16 @@
       justify-content: center;
       min-height: 600px;
       height: calc(100vh - 118px);
+      @media (max-width: ($menu-desktop-width - 1)) {
+        height: auto;
+        min-height: auto;
+        padding: 4em;
+        align-items: center;
+        min-height: 400px;
+        .btn {
+          margin: 0 auto;
+        }
+      }
     }
   }
 
@@ -40,6 +50,13 @@
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 10px;
+    @media (max-width: ($menu-desktop-width - 1)) {
+      font-size: 34px;
+      text-align: center;
+    }
+    @media (max-width: ($screen-sm - 1)) {
+      font-size: 24px;
+    }
   }
   &__caption {
     line-height: 1.6;

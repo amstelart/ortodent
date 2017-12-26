@@ -8,6 +8,20 @@
 
   display: flex;
 
+  @media (max-width: ($menu-desktop-width - 1)) {
+    flex-direction: column;
+    #{$block-name}__note-title {
+      margin-top: 0;
+    }
+    #{$block-name}__card-img {
+      margin: 0 auto 20px auto;
+    }
+    #{$block-name}__note {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
   &__card {
     flex-shrink: 0;
     color: #fff;

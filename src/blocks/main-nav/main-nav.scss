@@ -35,6 +35,27 @@ $transition-time:             0.3s !default;
 
       // открытие/закрытие меню только в случае работающего JS
 
+      #{$block-name}__item {
+        &:first-child {
+          margin-top: 20px;
+        }
+        &:not(:last-of-type) {
+          border-bottom: 1px solid darken($color-main, 8%);
+        }
+      }
+
+      #{$block-name}__link {
+        background: darken($color-main, 5%);
+        color: #fff;
+        padding: 1em;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+
       .js & {
         overflow: hidden;
         max-height: 0;

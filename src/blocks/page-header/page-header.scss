@@ -19,11 +19,19 @@
 
   &__logo {
     @include col();
-    @include col(md, 3);
+    @include col(lg, 3);
+    @include col(md, 12);
+    position: relative;
+    .main-nav__toggler {
+      position: absolute;
+      right: 15px;
+      top: 0;
+    }
   }
   &__block {
     @include col();
-    @include col(md, 9);
+    @include col(lg, 9);
+    @include col(md, 12);
   }
 
   &__info {
@@ -31,6 +39,19 @@
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 10px;
+    @media (max-width: ($screen-lg - 1)) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .contacts-info {
+        margin-right: 0;
+      }
+      .social-link {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: ($screen-md - 1)) {
+      display: none;
+    }
     .contacts-info {
       margin-right: 4em;
     }

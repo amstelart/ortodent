@@ -7,6 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   @include row;
+  align-items: center;
 
   &__col-list {
     @include col();
@@ -24,6 +25,10 @@
     margin: 0;
     padding: 0;
     font-size: 18px;
+    @media (max-width: ($menu-desktop-width - 1)) {
+      column-count: 1;
+      text-align: center;
+    }
   }
 
   &__list-item {
@@ -33,6 +38,7 @@
   &__list-link {
     color: $text-color;
     display: block;
+    line-height: 1.4;
     text-decoration: none;
     text-transform: uppercase;
 
