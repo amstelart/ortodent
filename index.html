@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Ортодент</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/manifest.json">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <div class="page-header__content">
+            <div class="page-header__logo">
+              <a href="" class="logo">
+                <img src="img/logo.png" width="255" height="55" alt="Ортодент">
+              </a>
+            </div>
+            <div class="page-header__block">
+              <div class="page-header__info">
+                <div class="contacts-info">
+                  <div class="contacts-info__item">
+                    <svg class="icon" width="24" height="24">
+                      <use xlink:href="img/sprite-svg.svg#icon-phone"/>
+                    </svg>
+                    +7 (4712) 74-70-44</div>
+                  <div class="contacts-info__item">
+                    <svg class="icon" width="24" height="24">
+                      <use xlink:href="img/sprite-svg.svg#icon-place"/>
+                    </svg>
+                    Курск, проспект Дериглазова 33</div>
+                </div>
+                <div class="social-link">
+                  <div class="social-link__item">
+                    <a href="#">
+                      <svg class="icon" width="24" height="24">
+                        <use xlink:href="img/sprite-svg.svg#icon-vk"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="social-link__item">
+                    <a href="#">
+                      <svg class="icon" width="24" height="24">
+                        <use xlink:href="img/sprite-svg.svg#icon-instagram"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="call-btn">
+                  <button class="btn btn--block btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
+                </div>
+              </div>
+              <div class="page-header__nav">
+                <nav id="main-nav" class="main-nav" role="navigation">
+                  <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item  main-nav__item--active">
+                      <a href="page-prices.html" class="main-nav__link">
+                        Услуги и цены
+                      </a>
+                      <!-- <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
+                        <ul class="main-nav__list  main-nav__list--lvl-2">
+                          <li class="main-nav__item  main-nav__item--lvl-2">
+                            <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                              Контакты
+                            </a>
+                          </li>
+                          <li class="main-nav__item  main-nav__item--lvl-2">
+                            <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                              Услуги
+                            </a>
+                            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
+                              <ul class="main-nav__list  main-nav__list--lvl-3">
+                                <li class="main-nav__item  main-nav__item--lvl-3">
+                                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
+                                    Вёрстка HTML-CSS
+                                  </a>
+                                </li>
+                                <li class="main-nav__item  main-nav__item--lvl-3">
+                                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
+                                    Стриптиз
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div> -->
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="page-license.html" class="main-nav__link">
+                        Лицензии
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="page-team.html" class="main-nav__link">
+                        Специалисты
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="page-answer.html" class="main-nav__link">
+                        Вопрос ответ
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="page-reviews.html" class="main-nav__link">
+                        Отзывы
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="page-gallery.html" class="main-nav__link">
+                        Фотогалерея
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="page-timetable.html" class="main-nav__link">
+                        Расписание врачей
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="page-contacts.html" class="main-nav__link">
+                        Контакты
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="main-section main-section--main-slider">
+        <div class="owl-carousel main-slider" id="main-slider">
+          <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
+            <div class="main-section__inner">
+              <div class="main-slider__title">Скидка на все виды услуг <br>при обслуживании семьи 15%</div>
+              <button class="btn btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Оставить заявку</button>
+            </div>
+          </div>
+          <div class="main-slider__item" style="background-image: url(img/slider-image-02.jpg);">
+            <div class="main-section__inner">
+              <div class="main-slider__title">Скидка на все виды услуг <br>при обслуживании семьи 15%</div>
+              <button class="btn btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Оставить заявку</button>
+            </div>
+          </div>
+          <div class="main-slider__item" style="background-image: url(img/slider-image-03.jpg);">
+            <div class="main-section__inner">
+              <div class="main-slider__title">Скидка на все виды услуг <br>при обслуживании семьи 15%</div>
+              <button class="btn btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Оставить заявку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--services">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Наши услуги</h2>
+          </div>
+          <div class="services">
+            <div class="services__col-list">
+              <ul class="services__list">
+                <li class="services__list-item"><a class="services__list-link" href="#">Взрослая стоматология</a></li>
+                <li class="services__list-item"><a class="services__list-link" href="#">Детская стоматология</a></li>
+                <li class="services__list-item"><a class="services__list-link" href="#">Ортодонтический приём</a></li>
+                <li class="services__list-item"><a class="services__list-link" href="#">Ортопедический приём</a></li>
+                <li class="services__list-item"><a class="services__list-link" href="#">Лечение дёсен</a></li>
+                <li class="services__list-item"><a class="services__list-link" href="#">Лечение зубов</a></li>
+              </ul>
+            </div>
+            <div class="services__col-form">
+              <div class="form-container">
+                <div class="form-container__header">
+                  <p>Для получения подробной информации звоните
+                  нам по тел.: <span>+7 (4712) 74-70-44</span> или <a href="#">оставьте заявку</a></p>
+                </div>
+                <form action="">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
+                    </span>
+                  </label>
+                  <div class="field-actions">
+                    <button class="btn btn--main btn--block">Отправить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--specialists" style="background-image: url(img/main-specialists-bg.jpg);">
+        <div class="main-section__inner">
+          <div class="owl-carousel specialists-carousel" id="specialists-carousel">
+            <div class="item specialists">
+              <div class="specialists__card">
+                <div class="specialists__card-img">
+                  <img src="img/specialist-image.jpg" width="230" height="230" alt="">
+                </div>
+                <h3 class="specialists__card-title">Лузина Анна</h3>
+                <p class="specialists__card-caption">Стоматолог</p>
+              </div>
+              <div class="specialists__note">
+                <h2 class="specialists__note-title">Всегда мечтала стать стоматологом</h2>
+                <p class="specialists__note-text">
+                  Не следует, однако забывать, что начало повседневной работы
+                  по формированию позиции играет важную роль в формировании
+                  форм развития. Значимость этих проблем настолько очевидна,
+                  что начало повседневной работы по формированию позиции
+                  позволяет оценить значение направлений прогрессивного развития.
+                </p>
+                <a class="btn btn--outline" href="#">Записаться к врачу</a>
+              </div>
+            </div>
+            <div class="item specialists">
+              <div class="specialists__card">
+                <div class="specialists__card-img">
+                  <img src="img/specialist-image.jpg" width="230" height="230" alt="">
+                </div>
+                <h3 class="specialists__card-title">Лузина Анна</h3>
+                <p class="specialists__card-caption">Стоматолог</p>
+              </div>
+              <div class="specialists__note">
+                <h2 class="specialists__note-title">Всегда мечтала стать стоматологом</h2>
+                <p class="specialists__note-text">
+                  Не следует, однако забывать, что начало повседневной работы
+                  по формированию позиции играет важную роль в формировании
+                  форм развития. Значимость этих проблем настолько очевидна,
+                  что начало повседневной работы по формированию позиции
+                  позволяет оценить значение направлений прогрессивного развития.
+                </p>
+                <a class="btn btn--outline" href="#">Записаться к врачу</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Вопрос-ответ</h2>
+          </div>
+          <div class="main-faq">
+            <div class="main-faq__item">
+              <div class="main-faq__user"><span>17.05.2016</span> Александр</div>
+              <div class="main-faq__question">
+                <p>
+                  Нельзя не принять во внимание тот факт, что педотубула вызывает иловатый электрод как при нагреве, так и при охлаждении. Ил перманентно нагревает фингер-эффект, и этот процесс может повторяться многократно?
+                </p>
+              </div>
+              <div class="main-faq__answer">
+                <p>
+                  Аржиллана растворяет турбулентный тензиометр. Липкость переносит пирогенный шаг смешения. Монолит вызывает бурозём. Грунт, по данным почвенной съемки, химически притягивает пахотный бурозём в полном соответствии с законом Дарси. Реопексия поглощает гранулометрический анализ.
+                </p>
+              </div>
+            </div>
+            <div class="main-faq__item">
+              <div class="main-faq__user"><span>17.05.2016</span> Александр</div>
+              <div class="main-faq__question">
+                <p>
+                  Нельзя не принять во внимание тот факт, что педотубула вызывает иловатый электрод как при нагреве, так и при охлаждении. Ил перманентно нагревает фингер-эффект, и этот процесс может повторяться многократно?
+                </p>
+              </div>
+              <div class="main-faq__answer">
+                <p>
+                  Аржиллана растворяет турбулентный тензиометр. Липкость переносит пирогенный шаг смешения. Монолит вызывает бурозём. Грунт, по данным почвенной съемки, химически притягивает пахотный бурозём в полном соответствии с законом Дарси. Реопексия поглощает гранулометрический анализ.
+                </p>
+              </div>
+            </div>
+            <div class="main-faq__btn">
+              <a class="btn btn--main" href="#">Задать вопрос</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--license" style="background-image: url(img/main-license-bg.jpg);">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Дипломы и сертификаты</h2>
+            <div class="owl-carousel license-carousel" id="license-carousel">
+              <div class="item">
+                <a href="img/doc-demo-big.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/doc-demo.jpg" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/doc-demo-big.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/doc-demo.jpg" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/doc-demo-big.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/doc-demo.jpg" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/doc-demo-big.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/doc-demo.jpg" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/doc-demo-big.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/doc-demo.jpg" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/doc-demo-big.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/doc-demo.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--gallery">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Галерея</h2>
+            <div class="owl-carousel gallery-carousel">
+              <div class="item">
+                <a href="img/gallery-image-01.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/gallery-image-01.jpg" width="362" height="250" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/gallery-image-02.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/gallery-image-02.jpg" width="362" height="250" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/gallery-image-03.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/gallery-image-03.jpg" width="362" height="250" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/gallery-image-01.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/gallery-image-01.jpg" width="362" height="250" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/gallery-image-02.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/gallery-image-02.jpg" width="362" height="250" alt="">
+                </a>
+              </div>
+              <div class="item">
+                <a href="img/gallery-image-03.jpg" data-fancybox="" data-caption="Название документа">
+                  <img src="img/gallery-image-03.jpg" width="362" height="250" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <main role="main">
+        <h1>NTH start project</h1>
+        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
+      </main> -->
+    </div>
+    <section class="feedback-section" style="background-image: url(img/feedback-section-bg.jpg);">
+      <div class="feedback-section__inner">
+        <div class="feedback-section__header">
+          <h2 class="feedback-section__title">Остались вопросы?</h2>
+          <p class="feedback-section__caption">Для получения подробной информации звоните нам по тел.: +7 (4712) 74-70-44 или оставьте заявку</p>
+        </div>
+        <form action="" class="feedback-form" id="">
+          <label class="field-text feedback-form__field">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+            </span>
+          </label>
+          <label class="field-text feedback-form__field">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
+            </span>
+          </label>
+          <div class="field-actions feedback-form__field">
+            <button class="btn btn--block btn--outline">Оставить заявку</button>
+          </div>
+        </form>
+        <p class="feedback-section__info">Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a></p>
+      </div>
+    </section>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <div class="page-footer__content">
+            <div class="page-footer__logo">
+              <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="">
+              </a>
+            </div>
+            <div class="page-footer__nav">
+              <ul class="footer-nav">
+                <li><a href="#">Услуги и цены</a></li>
+                <li><a href="#">Лицензии</a></li>
+                <li><a href="#">Специалисты</a></li>
+                <li><a href="#">Расписание врачей</a></li>
+                <li><a href="#">Вопрос-ответ</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Фотогалерея</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__info">
+              <div class="contacts-info">
+                <div class="contacts-info__item">
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-phone"/>
+                  </svg>
+                  +7 (4712) 74-70-44</div>
+                <div class="contacts-info__item">
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-place"/>
+                  </svg>
+                  Курск, проспект Дериглазова 33</div>
+              </div>
+            </div>
+            <div class="page-footer__social">
+              <div class="call-btn">
+                <button class="btn btn--block btn--outline" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
+              </div>
+              <div class="social-link">
+                <div class="social-link__item">
+                  <a href="#">
+                    <svg class="icon" width="24" height="24">
+                      <use xlink:href="img/sprite-svg.svg#icon-vk"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="social-link__item">
+                  <a href="#">
+                    <svg class="icon" width="24" height="24">
+                      <use xlink:href="img/sprite-svg.svg#icon-instagram"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="page-footer__inner">
+            <p>Разработка сайта — <a href="http://www.2showbiz.ru/">Showbiz Studio</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h2 class="modal__title">Остались вопросы?</h2>
+          <p class="modal__caption">Для получения подробной инфомрации позвоните
+          нам по тел.: +7 (4712) 74-70-44 или оставьте заявку</p>
+        </div>
+        <div class="modal__body">
+          <form class="modal-call__form" action="">
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="ИМЯ" id="">
+              </span>
+            </label>
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id="">
+              </span>
+            </label>
+            <div class="field-actions">
+              <button class="btn btn--block btn--main">Оставить заявку</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <p class="modal__footer-text">Оставляя заявку я соглашаюсь на обработку
+          персональных данных. <a href="#">Политика конфиденциальности</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.min.js"></script>
+  <script src="js/global-script.js"></script>
+</body>
+</html>
